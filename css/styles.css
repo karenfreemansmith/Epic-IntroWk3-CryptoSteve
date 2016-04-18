@@ -1,3 +1,12 @@
+body {
+  background-color: #ff8000;
+}
 h1 {
-  color: red; //test for css file linked correctly
+  background-color: white;
+  color: black;
+  font-size: 3em;
+  line-height: 3em;
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+  border-radius: 25px;
 }
