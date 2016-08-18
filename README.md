@@ -2,7 +2,7 @@
 ![project screenshot](/img/screenshot.jpg)
 
 __Version 1: August 18, 2016__
-## by [Karen Freeman-Smith](https://karenfreemansmith.github.io), [Ewa Manek]() and [Jena SanCartier](https://jenasancartier.github.io/portfolio-page)
+## by [Karen Freeman-Smith](https://karenfreemansmith.github.io), [Ewa Manek](https://github.com/ewajm) and [Jena SanCartier](https://jenasancartier.github.io/portfolio-page)
 
 ### Description
 __*A webpage that helps you dismember Steve and put him back together again in a different order (makes secret messages)*__
