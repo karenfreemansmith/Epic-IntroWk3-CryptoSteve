@@ -12,6 +12,7 @@ function encode(phrase) {
   phrase = phrase.toLowerCase();
   phrase = phrase.replace(/[^a-z]/g,'');
   cols = parseInt(Math.sqrt(phrase.length));
+  var stevePhrase = "";
   var bigArray = [];
   var smallArray = [];
   var counter = 0;
@@ -27,6 +28,16 @@ function encode(phrase) {
       i--;
     }
   }
+for(var i = 0; i < cols; i++) {
+  for(var j = 0; j < bigArray.length; j++) {
+    stevePhrase+=bigArray[j][i];
+    if (counter % 5 === 0) {
+      stevePhrase += " ";
+    }
+    counter++;
+  }
+}
+
   console.log(bigArray);
-  return phrase;
+  return stevePhrase;
 }
