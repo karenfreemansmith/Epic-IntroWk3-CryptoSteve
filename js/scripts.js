@@ -16,7 +16,7 @@ function encode(phrase) {
   var bigArray = [];
   var smallArray = [];
   var counter = 0;
-  for(var i = 0; i <= phrase.length; i++){
+  for(var i = 0; i < phrase.length; i++){
     //debugger;
     if(counter < cols){
       smallArray.push(phrase.charAt(i));
@@ -28,15 +28,19 @@ function encode(phrase) {
       i--;
     }
   }
-for(var i = 0; i < cols; i++) {
-  for(var j = 0; j < bigArray.length; j++) {
-    stevePhrase+=bigArray[j][i];
-    if (counter % 5 === 0) {
-      stevePhrase += " ";
+  bigArray.push(smallArray);
+  counter = 1;
+  for(var i = 0; i < cols; i++) {
+    for(var j = 0; j < bigArray.length; j++) {
+      if(bigArray[j][i]){
+        stevePhrase+=bigArray[j][i];
+        if (counter % 5 === 0) {
+          stevePhrase += " ";
+        }
+        counter++;
+      }
     }
-    counter++;
   }
-}
 
   console.log(bigArray);
   return stevePhrase;
