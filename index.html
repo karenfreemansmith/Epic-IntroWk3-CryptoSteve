@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible">
+    <meta name="viewport" value="width=device-width, initial-scale=1">
+    <title>Crypto-Steve</title>
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <title></title>
   </head>
   <body>
     <div class="container">
-      <img src="img/guy.jpg">
-    <form>
-      <div class="form-group">
-        <label for="words">Enter a word or phrase and Steve will encode them for you:</label>
-        <input id="words" class="form-control" type="text">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Crypto-Steve</h1>
+          <img src="img/guy.jpg">
+          <form>
+            <div class="form-group">
+              <label for="words">Enter a word or phrase and Steve will encode them for you:</label>
+              <input id="words" class="form-control" type="text">
+            </div>
+            <button type="submit" class="btn btn-warning form-control">Encode me, baby.</button>
+          </form>
+        </div>
+
+        <div class="col-sm-6">
+          <h4>Test Phrase:</h4>
+          <p>don't compare yourself to others, compare yourself to the person you were yesterday</p>
+          <h4>Expected Encoding:</h4>
+          <p>daeer leweo rlref rerne fsyts rdtyt coooe acooo utnyy ouomr hyemr tpseo spsha eput</p>
+          <h2 id="results"></h2>
+        </div>
       </div>
-      <button type="submit" class="btn btn-warning form-control">Encode me, baby.</button>
-    </form>
-    <h2 id="results"></h2>
-  </div>
+    </div>
   <script src="js/jquery-3.1.0.js"></script>
   <script src="js/scripts.js"></script>
   </body>

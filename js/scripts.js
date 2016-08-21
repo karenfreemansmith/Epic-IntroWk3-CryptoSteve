@@ -1,47 +1,30 @@
-
-
 //user interface
 $("form").submit(function(event){
-  $("#results").text(encode($("#words").val()));
+  $("#results").text(encrypt($("#words").val()));
   event.preventDefault();
 });
 
-//business Logic
-function encode(phrase) {
-  var cols=0;
-  phrase = phrase.toLowerCase();
-  phrase = phrase.replace(/[^a-z]/g,'');
-  cols = parseInt(Math.sqrt(phrase.length));
-  var stevePhrase = "";
-  var bigArray = [];
-  var smallArray = [];
-  var counter = 0;
-  for(var i = 0; i < phrase.length; i++){
-    //debugger;
-    if(counter < cols){
-      smallArray.push(phrase.charAt(i));
+// backend logic for old form
+function encrypt(phrase) {
+  var cleanedText = stripXtraCharacters(phrase);
+  var squareSize = Math.floor(Math.sqrt(cleanedText.length));
+  var cryptosquare = cleanedText.split("");
+  var encryptedText=[];
+  var counter=0;
+  for(j=0;j<squareSize;j++){
+    for(i=j;i<cryptosquare.length;i+=squareSize){
+      encryptedText.push(cleanedText[i]);
       counter++;
-    } else {
-      bigArray.push(smallArray);
-      counter = 0;
-      smallArray = [];
-      i--;
-    }
-  }
-  bigArray.push(smallArray);
-  counter = 1;
-  for(var i = 0; i < cols; i++) {
-    for(var j = 0; j < bigArray.length; j++) {
-      if(bigArray[j][i]){
-        stevePhrase+=bigArray[j][i];
-        if (counter % 5 === 0) {
-          stevePhrase += " ";
-        }
-        counter++;
+      if(counter===5) {
+        encryptedText.push(" ");
+        counter=0;
       }
     }
   }
+  return encryptedText.join("");
+}
 
-  console.log(bigArray);
-  return stevePhrase;
+function stripXtraCharacters(str) {
+  str = str.toLowerCase();
+  return str.replace(/[^a-z]/g,'');
 }
