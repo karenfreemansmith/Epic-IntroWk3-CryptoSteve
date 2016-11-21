@@ -9,20 +9,22 @@ __*This webpage is named "Steve". Steve will take your phrase and encrypt it for
 
 ![project requirements](/img/specs.png)
 
-### Setup/Installation
-* None required, [view page here](https://karenfreemansmith.github.io/crypto-steve)
-* Clone or download and extract to use*
+## Technologies Used
+HTML, CSS
 
-### Support & Contact
-For questions or comments, please __email [Karen](karenfreemansmith@gmail.com)__
+## Setup/Installation
+* [View on Github Pages](https://karenfreemansmith.github.io/EpicIntroWk1-PetWebsite)
+* _OR_
+* Clone diectory 
+* Open index.html in your favorite browser
 
-### Known Issues
-* the program rounds down (math.floor) in order to make the results match the test, while the instructions indicate we should be rounding up (math.ceil).
+## Support & Contact
+For questions, concerns, or suggestions please email karenfreemansmith@gmail.com
 
-### Technologies Used
-###### HTML, CSS, Bootstrap, JavaScript, jQuery
+## Known Issues
+* None
 
-### Legal
+## Legal
 *Licensed under the GNU General Public License v3.0*
 
-Copyright (c) 2016 **_Karen Freeman-Smith_, _Ewa Manek_ & _Jena SanCartier_**
+Copyright (c) 2016 Copyright _[Karen Freeman-Smith](https://karenfreemansmith.github.io)_ All Rights Reserved.
